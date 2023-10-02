@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import QrScanner from './utils/qrScanner/qrScanner';
+import { API_BASE_URL } from './config';
 
 function App() {
 	const [qrCode, setQrCode] = useState(null);
@@ -9,7 +10,7 @@ function App() {
 	useEffect(() => {
 		const generateQrCode = async () => {
 			try {
-				const { data } = await axios.get(`/generate_qr`);
+				const { data } = await axios.get(`${API_BASE_URL}/generate_qr`);
 				setQrCode(data.qr_code_url);
 			} catch (error) {
 				console.error('Could not generate QR Code', error);
