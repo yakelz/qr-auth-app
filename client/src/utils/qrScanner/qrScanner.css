@@ -1,0 +1,14 @@
+#reader {
+	border: 2px solid #000;
+	border-radius: 5px;
+}
+
+.qr-reader {
+}
+
+#reader img {
+	display: none;
+}
+/* #reader #reader__dashboard {
+	display: none;
+} */
